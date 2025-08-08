@@ -1,0 +1,6 @@
+quart
+requests
+discord
+ipaddress
+tensorflow
+numpy
