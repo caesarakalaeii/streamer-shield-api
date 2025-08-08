@@ -51,11 +51,17 @@ docker run -p 38080:38080 streamer-shield-api
 ```
 
 ## Environment Variables
-No environment variables are required by default. If you add any in the future, document them here.
+- `PORT`: (optional) The port number for the REST API server. Defaults to `38080` if not set.
+
+To run the server on a custom port, set the environment variable before starting:
+```sh
+export PORT=5000  # On Linux/macOS
+set PORT=5000     # On Windows
+python streamer_shield_rest.py
+```
 
 ## Contributing
 Feel free to open issues or submit pull requests for improvements.
 
 ## License
 Specify your license here.
-

@@ -23,8 +23,13 @@ async def calculate():
         print(e)
         return jsonify({'error': str(e)}), 400
 
+@app.route('/health')
+def login():
+    return 'I\'m Healthy',200
+
 def predict(input_string):
     return shield.predict(input_string)
 
 if __name__ == '__main__':
-    app.run(debug=False, port=38080)
+    port = int(os.environ.get("PORT", 38080))
+    app.run(debug=False, port=port)
