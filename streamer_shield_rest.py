@@ -1,5 +1,4 @@
 import os
-import sys
 from quart import Quart, request, jsonify
 import numpy as np
 from streamer_shield import StreamerShield
