@@ -5,7 +5,7 @@ import numpy as np
 from streamer_shield import StreamerShield
 
 app = Quart(__name__)
-shield = StreamerShield("../attempt_5.h5", "../vocabulary_5.json", 30)
+shield = StreamerShield("attempt_5.h5", "vocabulary_5.json", 30)
 
 # Create an endpoint that accepts a string and returns a float
 @app.route('/api/predict', methods=['POST'])
@@ -24,7 +24,7 @@ async def calculate():
         return jsonify({'error': str(e)}), 400
 
 @app.route('/health')
-def login():
+def health():
     return 'I\'m Healthy',200
 
 def predict(input_string):
@@ -32,4 +32,4 @@ def predict(input_string):
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 38080))
-    app.run(debug=False, port=port)
+    app.run('0.0.0.0',debug=False, port=port)
