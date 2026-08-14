@@ -5,3 +5,4 @@ result
 result-*
 *.pyc
 .direnv/
+.ruff_cache/
