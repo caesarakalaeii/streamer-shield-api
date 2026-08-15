@@ -1,3 +1,8 @@
 .idea
 __pycache__
 .venv
+result
+result-*
+*.pyc
+.direnv/
+.ruff_cache/
